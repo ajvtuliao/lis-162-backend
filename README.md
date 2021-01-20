@@ -11,6 +11,7 @@
 7. Create an empty database, and enter its credentials in the `.env ` file
 8. Insert `SANCTUM_STATEFUL_DOMAINS=localhost:8080` anywhere in the `.env` file
 9. Add `SESSION_DOMAIN=.localhost` in the `.env` file, then change `SESSION_DRIVER` to `cookie`
+10. Run `php artisan migrate`
 
 #### Usage
 
