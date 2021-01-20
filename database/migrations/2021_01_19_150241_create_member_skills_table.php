@@ -19,7 +19,7 @@ class CreateMemberSkillsTable extends Migration
             $table->string('name');
             $table->string('skill');
 //            $table->foreign('name')->references('name')->on('members');
-            $table->unsignedBigInteger('member_id');
+            $table->unsignedBigInteger('member_id')->nullable();
             $table->foreign('member_id')->references('id')->on('members');
         });
     }

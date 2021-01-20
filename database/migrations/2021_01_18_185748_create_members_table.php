@@ -22,7 +22,7 @@ class CreateMembersTable extends Migration
             $table->text('project')->nullable();
             $table->date('start')->nullable();
 //            $table->foreign('name')->references('name')->on('users');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

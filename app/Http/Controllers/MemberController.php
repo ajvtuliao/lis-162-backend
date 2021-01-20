@@ -43,12 +43,16 @@ class MemberController extends Controller
         $member->date = $request->date;
         $member->project = $request->current;
         $member->start = $request->start;
+//        $member->user_id = $request->user_id;
         $member->save();
+
+        $request->skills = $request->skills ? $request->skills : [];
 
         foreach ($request->skills as $skill) {
             $s = new MemberSkill;
             $s->name = $request->name;
             $s->skill = $skill;
+//            $s->member_id = $member->id;
             $s->save();
         }
 

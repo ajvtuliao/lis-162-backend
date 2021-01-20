@@ -39,6 +39,7 @@ class SkillController extends Controller
         $skill = new Skill;
         $skill->skill = $request->skill;
         $skill->description = $request->skilldesc;
+//        $skill->member_skill_id = $request->member_skill_id;
         $skill->save();
 
         return 200;
