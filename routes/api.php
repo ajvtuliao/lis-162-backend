@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-});
-
+Route::get('/user/{email}', 'App\Http\Controllers\UserController@check');
 Route::get('/members', 'App\Http\Controllers\MemberController@index');
 Route::get('/members/member/{id}', 'App\Http\Controllers\MemberController@show');
 Route::post('/skills', 'App\Http\Controllers\SkillController@store');

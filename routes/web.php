@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::any('{all}', function () {
+    return File::get(public_path() . '/index.html');
+})->where('all', '^(?!api)(?!sanctum)(?!login)(?!logout)(?!register)(?!user)(?!admin).*$');
